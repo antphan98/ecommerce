@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Header from "../components/Header/Header";
+import { Button } from "react-bulma-components";
 
 export default function Home() {
   return (
@@ -9,6 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
+        <Button color="primary">My Bulma button</Button>
+
+        <Header />
         <h1>hello</h1>
       </main>
 
