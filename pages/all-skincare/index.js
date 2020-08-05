@@ -2,6 +2,7 @@ import Header from "../../components/Header/Header";
 import { skincare } from "../../data/skincare";
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
+import AllSkincare from "../../components/AllSkincare/AllSkincare";
 
 export default function allskincare() {
   const [allSkincare, setAllSkincare] = useState([]);
@@ -30,9 +31,9 @@ export default function allskincare() {
       <h1>
         {allSkincare &&
           allSkincare.map((skincare, i) => (
-            <p key={i} skincare={skincare}>
+            <AllSkincare key={i} skincare={skincare}>
               {allSkincare.name}
-            </p>
+            </AllSkincare>
           ))}
       </h1>
 
