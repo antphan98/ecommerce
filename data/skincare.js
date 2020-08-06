@@ -360,7 +360,7 @@ export const skincare = [
   {
     id: 20,
     name: "Moringa Cleansing Balm",
-    image: "images/cleansers/morgina-cleanser.jpg",
+    image: "images/cleansers/morgina-cleanser.png",
     price: 23,
     vendor: "Enature",
     producttype: "Cleanser",
@@ -446,7 +446,7 @@ export const skincare = [
   {
     id: 25,
     name: "Dear Hydration Boosting Cream",
-    image: "images/moisturizers/dear-hydration-cream",
+    image: "images/moisturizers/dear-hydration-cream.jpg",
     price: 25,
     vendor: "Banila Co",
     producttype: "Moisturizer",
@@ -653,7 +653,7 @@ export const skincare = [
   {
     id: 37,
     name: "Real Ferment Micro Serum",
-    image: "images/micro-serum.jpg",
+    image: "images/serums/micro-serum.jpg",
     price: 38,
     vendor: "Neogen",
     producttype: "Serum",
@@ -670,7 +670,7 @@ export const skincare = [
   {
     id: 38,
     name: "Rich Moist Soothing Serum",
-    image: "images/soothing-serum.jpg",
+    image: "images/serums/soothing-serum.jpg",
     price: 22,
     vendor: "Klairs",
     producttype: "Serum",
@@ -960,7 +960,7 @@ export const skincare = [
   {
     id: 55,
     name: "Hyaluron Skin Essence",
-    image: "images/essence/hyaluron-essence.jpg",
+    image: "images/essences/hyaluron-essence.jpg",
     price: 25,
     vendor: "Hanskin",
     producttype: "Essence",
@@ -978,7 +978,7 @@ export const skincare = [
   {
     id: 56,
     name: "Ultra Vitalizing Snail Essence Water",
-    image: "images/essence/snail-essence.jpg",
+    image: "images/essences/snail-essence.jpg",
     price: 38,
     vendor: "Dewytree",
     producttype: "Essence",
