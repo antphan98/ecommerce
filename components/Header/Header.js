@@ -22,10 +22,14 @@ export default function Header() {
               <Navbar.Link>Skincare</Navbar.Link>
               <Navbar.Dropdown>
                 <Navbar.Item>
-                  <Link href="/all-skincare">All Skincare</Link>
+                  <Link href="/all-skincare">
+                    <a>All Skincare</a>
+                  </Link>
                 </Navbar.Item>
                 <Navbar.Item>
-                  <Link href="/cleansers">Cleansers</Link>
+                  <Link href="/cleansers">
+                    <a>Cleansers</a>
+                  </Link>
                 </Navbar.Item>
                 <Navbar.Item>
                   <Link href="/toners">Toners</Link>

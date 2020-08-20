@@ -16,9 +16,9 @@ const AllSkincare = () => {
     fetchData();
   }, []);
 
-  if (!allSkincare) {
-    return null;
-  }
+  //   if (!allSkincare) {
+  //     return null;
+  //   }
 
   return (
     <Container id="products">
