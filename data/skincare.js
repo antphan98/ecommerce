@@ -3,7 +3,7 @@ export const skincare = [
     id: 1,
     name: "Supple Preparation Facial Toner",
     image: "images/toners/Klairs-Supple-Preparation-Toner.jpg",
-    price: 22,
+    price: 22.0,
     vendor: "Klairs",
     producttype: "Toner",
     ingredients:
@@ -20,7 +20,7 @@ export const skincare = [
     id: 2,
     name: "Licorice pH Balancing Cleansing Toner",
     image: "images/toners/Licorice-pH-Balancing-Cleansing-Toner.jpg",
-    price: 18,
+    price: 18.0,
     vendor: "Acwell",
     producttype: "Toner",
     ingredients:
@@ -54,7 +54,7 @@ export const skincare = [
     id: 4,
     name: "AHA-BHA-PHA 30Days Miracle Toner",
     image: "images/toners/30days-miracle-toner.jpg",
-    price: 16,
+    price: 16.0,
     vendor: "Some By Mi",
     producttype: "Toner",
     ingredients:
@@ -71,7 +71,7 @@ export const skincare = [
     id: 5,
     name: "Rose Water Toner",
     image: "images/toners/mamonde-hydrating-beauty-toner.jpg",
-    price: 23,
+    price: 23.0,
     vendor: "Mamonde",
     producttype: "Toner",
     ingredients:
@@ -88,7 +88,7 @@ export const skincare = [
     id: 6,
     name: "Beauty Water",
     image: "images/toners/beauty-water.jpg",
-    price: 30,
+    price: 30.0,
     vendor: "Son & Park",
     producttype: "Toner",
     ingredients:
@@ -105,7 +105,7 @@ export const skincare = [
     id: 7,
     name: "Birch Milk Refining Toner",
     image: "images/toners/birch-milk-toner.jpg",
-    price: 32,
+    price: 32.0,
     vendor: "Then I Met You",
     producttype: "Toner",
     ingredients:
@@ -122,7 +122,7 @@ export const skincare = [
     id: 8,
     name: "Peptide No-Sebum Balancing Toner",
     image: "images/toners/piptide-toner.jpg",
-    price: 35,
+    price: 35.0,
     vendor: "Tony Moly",
     producttype: "Toner",
     ingredients:
@@ -139,7 +139,7 @@ export const skincare = [
     id: 9,
     name: "Moistfull Collagen Facial Toner",
     image: "images/toners/moistfull-toner.jpg",
-    price: 15,
+    price: 15.0,
     vendor: "Etude House",
     producttype: "Toner",
     ingredients:
@@ -156,7 +156,7 @@ export const skincare = [
     id: 10,
     name: "Time Revolution Clear Toner",
     image: "images/toners/time-rev-toner.jpg",
-    price: 18,
+    price: 18.0,
     vendor: "Missha",
     producttype: "Toner",
     ingredients:
@@ -173,7 +173,7 @@ export const skincare = [
     id: 11,
     name: "Green Tea Fresh Toner",
     image: "images/toners/green-tea-toner.jpg",
-    price: 20,
+    price: 20.0,
     vendor: "Isntree",
     producttype: "Toner",
     ingredients:
@@ -190,7 +190,7 @@ export const skincare = [
     id: 12,
     name: "Gentle Black Deep Cleansing Oil",
     image: "images/cleansers/gentle-black-cleansing.jpg",
-    price: 23,
+    price: 23.0,
     vendor: "Klairs",
     producttype: "Cleanser",
     ingredients:
@@ -208,7 +208,7 @@ export const skincare = [
     id: 13,
     name: "No 5.5 pH Balancing Micro Cleansing Foam",
     image: "images/cleansers/micro-cleansing-foam.jpg",
-    price: 20,
+    price: 20.0,
     vendor: "Acwell",
     producttype: "Cleanser",
     ingredients:
@@ -226,7 +226,7 @@ export const skincare = [
     id: 14,
     name: "Green Tea Real Fresh Foam Cleanser",
     image: "images/cleansers/green-tea-foam-cleanser.jpg",
-    price: 19,
+    price: 19.0,
     vendor: "Neogen",
     producttype: "Cleanser",
     ingredients:
@@ -243,7 +243,7 @@ export const skincare = [
     id: 15,
     name: "Soothing Tea Cleansing Gel",
     image: "images/cleansers/then-i-met-u-cleanser.jpg",
-    price: 36,
+    price: 36.0,
     vendor: "Then I Met You",
     producttype: "Cleanser",
     ingredients:
@@ -260,7 +260,7 @@ export const skincare = [
     id: 16,
     name: "A New Leaf Cream Cleanser",
     image: "images/cleansers/new-leaf-cleanser.jpg",
-    price: 16,
+    price: 16.0,
     vendor: "Good (Skin) Days™",
     producttype: "Cleanser",
     ingredients:
@@ -277,7 +277,7 @@ export const skincare = [
     id: 15,
     name: "Egg White Pore Foam",
     image: "images/cleansers/egg-white-foam.jpg",
-    price: 11,
+    price: 11.0,
     vendor: "SkinFood",
     producttype: "Cleanser",
     ingredients:
@@ -294,7 +294,7 @@ export const skincare = [
     id: 16,
     name: "Rice Purifying Foaming Cleanser",
     image: "images/cleansers/rice-purifying-cleanser.jpg",
-    price: 29,
+    price: 29.0,
     vendor: "Commleaf",
     producttype: "Cleanser",
     ingredients:
@@ -311,10 +311,11 @@ export const skincare = [
     id: 17,
     name: "Tea Tree Cleansing Water",
     image: "images/cleansers/tea-tree-cleansing.jpg",
-    price: 17,
+    price: 17.0,
     vendor: "Benton",
-    producttype: "",
-    ingredients: "",
+    producttype: "Cleanser",
+    ingredients:
+      "Melaleuca Alternifolia (Tea Tree) Leaf Water (70%), Water (Aqua), Butylene Glycol, Dipropylene Glycol, Glycerin, 1,2-Hexanediol, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Polyglyceryl-6 Caprylate, Polyglyceryl-10 Laurate, Sodium Chloride",
     details:
       "Condense the makeup removal and first cleanse of your routine in one easy step with this game-changing cleansing water. Made with 70% tea tree leaf water, this cleansing water goes beyond simply removing stubborn makeup and impurities, and actually infuses skin with acne-fighting tea tree leaf extract oil in addition to the tea tree water. With only 10 ingredients and no fragrance, this is a cleansing water that does double duty, effectively removing dirt and grime from pores while treating them with antibacterial ingredients to keep sebum in check and pimples from forming.",
     skintype: "all",
@@ -327,7 +328,7 @@ export const skincare = [
     id: 18,
     name: "A-Thera Cleansing Foam",
     image: "images/cleansers/athera-cleanser.jpg",
-    price: 23,
+    price: 23.0,
     vendor: "Dr. Oracle",
     producttype: "Cleanser",
     ingredients:
@@ -344,7 +345,7 @@ export const skincare = [
     id: 19,
     name: "Petal Spa Oil To Foam Cleanser",
     image: "images/cleansers/petal-spa-cleanser.jpg",
-    price: 21,
+    price: 21.0,
     vendor: "Mamonde",
     producttype: "Cleanser",
     ingredients:
@@ -361,7 +362,7 @@ export const skincare = [
     id: 20,
     name: "Moringa Cleansing Balm",
     image: "images/cleansers/morgina-cleanser.png",
-    price: 23,
+    price: 23.0,
     vendor: "Enature",
     producttype: "Cleanser",
     ingredients:
@@ -379,7 +380,7 @@ export const skincare = [
     id: 21,
     name: "Real Cica Micellar Cleansing Foam",
     image: "images/cleansers/real-cica-cleanser.jpg",
-    price: 15,
+    price: 15.0,
     vendor: "Neogen",
     producttype: "Cleanser",
     ingredients:
@@ -396,7 +397,7 @@ export const skincare = [
     id: 22,
     name: "Bio-Peel Gauze Peeling Green Tea",
     image: "images/exfoliators/green-tea-gauze.jpg",
-    price: 27,
+    price: 27.0,
     vendor: "Neogen",
     producttype: "Exfoliator",
     ingredients:
@@ -413,7 +414,7 @@ export const skincare = [
     id: 23,
     name: "Black Sugar Wash-Off Face Mask",
     image: "images/exfoliators/black-sugar-mask.jpg",
-    price: 10,
+    price: 10.0,
     vendor: "SkinFood",
     producttype: ["Exfoliator", "Face Mask"],
     ingredients:

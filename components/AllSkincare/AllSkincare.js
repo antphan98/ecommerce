@@ -1,31 +1,7 @@
-// import { Columns } from "react-bulma-components";
-
-// const AllSkincare = (props) => {
-//   const { skincare } = props;
-//   return (
-//     <Columns size={12}>
-//       <Columns.Column>
-//         <p className="bd-notification is-success">{skincare.name}</p>
-//       </Columns.Column>
-//       <Columns.Column>
-//         <p className="bd-notification is-info">
-//           <img src={skincare.image}></img>
-//         </p>
-//       </Columns.Column>
-//       <Columns.Column>
-//         <p className="bd-notification is-warning">Third Column</p>
-//       </Columns.Column>
-//       <Columns.Column>
-//         <p className="bd-notification is-warning">Fourth Column</p>
-//       </Columns.Column>
-//     </Columns>
-//   );
-// };
-
-// export default AllSkincare;
 import fetch from "node-fetch";
 import { Columns, Image, Container } from "react-bulma-components";
 import { useState, useEffect } from "react";
+import currency from "currency.js";
 
 const AllSkincare = () => {
   const [allSkincare, setAllSkincare] = useState([]);
@@ -52,6 +28,7 @@ const AllSkincare = () => {
             <Columns.Column size={4} key={i} skincare={skincare}>
               <Image src={skincare.image}></Image>
               <h1>{skincare.name}</h1>
+              <p>{skincare.price}</p>
             </Columns.Column>
           ))}
       </Columns>

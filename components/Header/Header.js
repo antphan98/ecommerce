@@ -19,16 +19,26 @@ export default function Header() {
         <Navbar.Menu>
           <Navbar.Container>
             <Navbar.Item dropdown hoverable href="#">
-              <Navbar.Link>First</Navbar.Link>
+              <Navbar.Link>Skincare</Navbar.Link>
               <Navbar.Dropdown>
-                <Navbar.Item href="#">Subitem 1</Navbar.Item>
-                <Navbar.Item href="#">Subitem 2</Navbar.Item>
+                <Navbar.Item>
+                  <Link href="/all-skincare">All Skincare</Link>
+                </Navbar.Item>
+                <Navbar.Item>
+                  <Link href="/cleansers">Cleansers</Link>
+                </Navbar.Item>
+                <Navbar.Item>
+                  <Link href="/toners">Toners</Link>
+                </Navbar.Item>
+                <Navbar.Item>
+                  <Link href="/serums">Serums</Link>
+                </Navbar.Item>
               </Navbar.Dropdown>
             </Navbar.Item>
-            <Navbar.Item href="#">Second</Navbar.Item>
+            <Navbar.Item href="/toners">Toners</Navbar.Item>
           </Navbar.Container>
           <Navbar.Container position="end">
-            <Navbar.Item href="#">At the end</Navbar.Item>
+            <Navbar.Item href="#">Sign In/Sign Up</Navbar.Item>
           </Navbar.Container>
         </Navbar.Menu>
       </Navbar>
