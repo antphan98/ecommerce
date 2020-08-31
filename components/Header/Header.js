@@ -35,11 +35,11 @@ export default function Header() {
                   <Link href="/toners">Toners</Link>
                 </Navbar.Item>
                 <Navbar.Item>
-                  <Link href="/serums">Serums</Link>
+                  <Link href="/moisturizers">Moisturizers</Link>
                 </Navbar.Item>
               </Navbar.Dropdown>
             </Navbar.Item>
-            <Navbar.Item href="/toners">Toners</Navbar.Item>
+            <Navbar.Item href="/exfoliators">Exfoliators</Navbar.Item>
           </Navbar.Container>
           <Navbar.Container position="end">
             <Navbar.Item href="#">Sign In/Sign Up</Navbar.Item>
