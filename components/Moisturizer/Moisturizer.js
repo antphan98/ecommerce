@@ -11,7 +11,7 @@ const Moisturizer = () => {
       const data = await result.json();
 
       const filteredMoisturizers = data.filter((b) => {
-        if (b.producttype === "Moisturizers") {
+        if (b.producttype === "Moisturizer") {
           return true;
         }
 
@@ -27,14 +27,15 @@ const Moisturizer = () => {
     <Container id="products">
       <Columns>
         {moisturizers &&
-          moisturizers.map((moisturizer, i) => {
+          moisturizers.map((moisturizer, i) => (
             <Columns.Column key={i} size={4} skincare={moisturizer}>
               <Image src={moisturizer.image}></Image>
               <h1>{moisturizer.name}</h1>
               <p>{moisturizer.price}</p>
-            </Columns.Column>;
-          })}
+            </Columns.Column>
+          ))}
       </Columns>
+      <style jsx global>{``}</style>
     </Container>
   );
 };
