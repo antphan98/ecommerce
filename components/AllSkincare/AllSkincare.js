@@ -16,17 +16,13 @@ const AllSkincare = () => {
     fetchData();
   }, []);
 
-  //   if (!allSkincare) {
-  //     return null;
-  //   }
-
   return (
     <Container id="products">
       <Columns>
         {allSkincare &&
           allSkincare.map((skincare, i) => (
             <Columns.Column size={4} key={i} skincare={skincare}>
-              <Image src={skincare.image}></Image>
+              <Image href="/all-skincare/{id}" src={skincare.image}></Image>
               <h1>{skincare.name}</h1>
               <p>{skincare.price}</p>
             </Columns.Column>
