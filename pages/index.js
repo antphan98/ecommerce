@@ -1,27 +1,26 @@
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-
-import { Button } from "react-bulma-components";
+import { Button, Image } from "react-bulma-components";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>All About Skin</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Header />
-        <Button color="primary">My Bulma button</Button>
-
-        <h1>hello</h1>
-      </main>
+      <Header />
+      <Image id="background" src="images/skincarepage.jpg" />
 
       <Footer />
 
-      <style jsx>{``}</style>
+      <style jsx>{`
+        #background {
+          width: 10%;
+        }
+      `}</style>
     </div>
   );
 }

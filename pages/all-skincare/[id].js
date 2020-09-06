@@ -18,6 +18,8 @@ export default function cleansers() {
   if (error) return <div>{error.message}</div>;
   if (!data) return null;
 
+  console.log(data);
+
   return (
     <table>
       <thead>
@@ -32,7 +34,7 @@ export default function cleansers() {
           <td>{data.name}</td>
           <td>{data.price}</td>
           <td>
-            <Image src={data.image} />
+            <Image src={`/${data.image}`}></Image>
           </td>
         </tr>
       </tbody>

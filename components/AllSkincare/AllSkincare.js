@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import { Columns, Image, Container } from "react-bulma-components";
 import { useState, useEffect } from "react";
-import currency from "currency.js";
+import Link from "next/link";
 
 const AllSkincare = () => {
   const [allSkincare, setAllSkincare] = useState([]);
@@ -17,20 +17,25 @@ const AllSkincare = () => {
   }, []);
 
   return (
-    <Container id="products">
+    <>
       <Columns>
         {allSkincare &&
           allSkincare.map((skincare, i) => (
-            <Columns.Column size={4} key={i} skincare={skincare}>
-              <Image href="/all-skincare/{id}" src={skincare.image}></Image>
-              <h1>{skincare.name}</h1>
-              <p>{skincare.price}</p>
-            </Columns.Column>
+            <Link
+              as={`/all-skincare/${skincare.name}`}
+              href="/all-skincare/[id]"
+            >
+              <Columns.Column size={4} key={i} skincare={skincare}>
+                <Image src={skincare.image}></Image>
+                <h1>{skincare.name}</h1>
+                <p>{skincare.price}</p>
+              </Columns.Column>
+            </Link>
           ))}
       </Columns>
 
       <style jsx global>{``}</style>
-    </Container>
+    </>
   );
 };
 export default AllSkincare;
