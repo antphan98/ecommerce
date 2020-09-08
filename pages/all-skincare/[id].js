@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
-import { Image } from "react-bulma-components";
+import { Columns, Container, Image, Button } from "react-bulma-components";
+import Header from "../../components/Header/Header";
 
 const fetcher = async (url) => {
   const result = await fetch(url);
@@ -21,23 +22,26 @@ export default function cleansers() {
   console.log(data);
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Image</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{data.name}</td>
-          <td>{data.price}</td>
-          <td>
-            <Image src={`/${data.image}`}></Image>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <>
+      <Header />
+      <Container>
+        <Columns>
+          <Columns.Column size="half">
+            <Image style={{ width: "80%" }} src={data.image}></Image>
+          </Columns.Column>
+          <Columns.Column>
+            <h1 class="title">{data.name}</h1>
+            <h4 class="subtitle is-4">{data.vendor}</h4>
+            <h4 class="subtitle is-4">${data.price}</h4>
+            <p>{data.details}</p>
+            <br />
+            <p>pH Level: {data.phlevel}</p>
+            <p>Size: {data.size}</p>
+
+            <Button>Add To Cart</Button>
+          </Columns.Column>
+        </Columns>
+      </Container>
+    </>
   );
 }

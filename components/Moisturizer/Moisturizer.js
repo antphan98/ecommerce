@@ -11,7 +11,7 @@ const Moisturizer = () => {
       const data = await result.json();
 
       const filteredMoisturizers = data.filter((b) => {
-        if (b.producttype === "Moisturizer") {
+        if (b.producttype.includes("Moisturizer")) {
           return true;
         }
 

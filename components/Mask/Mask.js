@@ -10,7 +10,7 @@ const Mask = () => {
       const data = await result.json();
 
       const filteredMasks = data.filter((b) => {
-        if (b.producttype === "Face Mask") {
+        if (b.producttype.includes("Face Mask")) {
           return true;
         }
         return false;

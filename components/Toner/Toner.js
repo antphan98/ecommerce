@@ -11,7 +11,7 @@ const Toner = () => {
       const data = await result.json();
 
       const filteredToners = data.filter((b) => {
-        if (b.producttype === "Toner") {
+        if (b.producttype.includes("Toner")) {
           return true;
         }
         return false;
