@@ -4,7 +4,7 @@ import { Navbar } from "react-bulma-components";
 export default function Header() {
   return (
     <>
-      <Navbar id="nav">
+      <Navbar>
         <Navbar.Brand>
           <Navbar.Item renderAs="a" href="#">
             <img
@@ -46,11 +46,7 @@ export default function Header() {
           </Navbar.Container>
         </Navbar.Menu>
       </Navbar>
-      <style jsx>{`
-        .navbar #nav {
-          position: absolute;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </>
   );
 }

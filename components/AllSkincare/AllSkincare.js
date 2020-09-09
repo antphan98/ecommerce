@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
-import { Columns, Image, Container } from "react-bulma-components";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Grid from "@material-ui/core/Grid";
 
 const AllSkincare = () => {
   const [allSkincare, setAllSkincare] = useState([]);
@@ -18,22 +18,21 @@ const AllSkincare = () => {
 
   return (
     <>
-      <Columns>
+      <Grid container spacing={3}>
         {allSkincare &&
           allSkincare.map((skincare, i) => (
             <Link
               as={`/all-skincare/${skincare.name}`}
               href="/all-skincare/[id]"
             >
-              <Columns.Column size={4} key={i} skincare={skincare}>
-                <Image src={skincare.image}></Image>
+              <Grid item xs={4} key={i} skincare={skincare}>
+                <img src={skincare.image}></img>
                 <h1>{skincare.name}</h1>
                 <p>{skincare.price}</p>
-              </Columns.Column>
+              </Grid>
             </Link>
           ))}
-      </Columns>
-
+      </Grid>
       <style jsx global>{``}</style>
     </>
   );

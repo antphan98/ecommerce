@@ -12,15 +12,13 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Image id="background" src="images/skincarepage.jpg" />
-
+      <div className="landing-img">
+        <Image id="background" src="images/skincarepage.jpg" />
+        <Button className="skincare-btn">Discover Skincare</Button>
+      </div>
       <Footer />
 
-      <style jsx>{`
-        #background {
-          width: 10%;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </div>
   );
 }

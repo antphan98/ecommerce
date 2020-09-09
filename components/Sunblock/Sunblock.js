@@ -11,7 +11,7 @@ const Sunblock = () => {
       const data = result.json();
 
       const filteredSunblocks = data.filter((b) => {
-        if (b.producttype === "Sunblock") {
+        if (b.producttype.includes("Sunblock")) {
           return true;
         }
         return false;

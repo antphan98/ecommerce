@@ -11,7 +11,7 @@ const Serum = () => {
       const data = await result.json();
 
       const filteredSerums = data.filter((b) => {
-        if (b.producttype === "Serum") {
+        if (b.producttype.includes("Serum")) {
           return true;
         }
 

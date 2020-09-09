@@ -11,7 +11,7 @@ const Exfoliator = () => {
       const data = await result.json();
 
       const filteredExfoliators = data.filter((b) => {
-        if (b.producttype === "Exfoliator") {
+        if (b.producttype.includes("Exfoliator")) {
           return true;
         }
         return false;
@@ -29,7 +29,7 @@ const Exfoliator = () => {
             <Columns.Column size={4} key={i} skincare={exfoliator}>
               <Image src={exfoliator.image}></Image>
               <h1>{exfoliator.name}</h1>
-              <p>{exfoliator.price}</p>
+              <p>${exfoliator.price}</p>
             </Columns.Column>
           ))}
       </Columns>

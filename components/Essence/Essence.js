@@ -11,7 +11,7 @@ const Essence = () => {
       const data = await result.json();
 
       const filteredEssences = data.filter((b) => {
-        if (b.producttype === "Essence") {
+        if (b.producttype.includes("Essence")) {
           return true;
         }
         return false;
