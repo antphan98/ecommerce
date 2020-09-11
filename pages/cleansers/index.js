@@ -7,7 +7,7 @@ export default function cleansers() {
     <div className="container">
       <Header />
 
-      {Cleanser}
+      <Cleanser />
       <Footer />
     </div>
   );
