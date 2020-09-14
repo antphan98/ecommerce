@@ -90,8 +90,24 @@ export default function Home() {
             </Grid>
           </Grid>
         </div>
+        <h1 className="title">Our Products</h1>
+        <Grid container className="products">
+          <Grid item xs={12} sm={6}>
+            <Paper className="cleanser">
+              <h1 className="title">Cleansers</h1>
+            </Paper>
+            <Paper className="cleanser title">Toners</Paper>
+            <Paper className="cleanser title">Moisturizers</Paper>
+            <Paper className="cleanser title">Essences</Paper>
+          </Grid>
 
-        <Paper className="cleanser">hello</Paper>
+          <Grid item xs={12} sm={6}>
+            <Paper className="cleanser title">Exfoliators</Paper>
+            <Paper className="cleanser title">Serums</Paper>
+            <Paper className="cleanser title">Masks</Paper>
+            <Paper className="cleanser title">Sunblocks</Paper>
+          </Grid>
+        </Grid>
       </Container>
 
       <Footer />
@@ -106,12 +122,18 @@ export default function Home() {
         .home-btn {
           position: absolute;
           bottom: 0;
-          top: 50%;
           left: 50%;
+          top: 0;
+          transform: translate(-50%, -50%);
         }
 
         .Grid.MuiGrid-item {
           padding: 50px;
+        }
+
+        .cleanser {
+          padding: 20px;
+          margin: 20px;
         }
       `}</style>
     </div>
