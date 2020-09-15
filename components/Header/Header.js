@@ -56,8 +56,8 @@ import { Box, Typography, Button, IconButton } from "@material-ui/core";
 
 export default function Header() {
   return (
-    <Box display="flex" bgcolor="grey.200" p={2} alignItems="center">
-      <Typography>React-bootstrap</Typography>
+    <Box display="flex" p={3} alignItems="center">
+      <Typography>All About Skin</Typography>
       <Box>
         <Button color="primary">Link</Button>
         <Button color="primary">Link</Button>

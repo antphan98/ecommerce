@@ -2,7 +2,7 @@ import { Hero, Container, Footer, Content } from "react-bulma-components";
 
 export default function footer() {
   return (
-    <Hero size="fullheight">
+    <Hero>
       <Hero.Head renderAs="header" />
       <Hero.Body />
       <Hero.Footer>
