@@ -29,72 +29,84 @@ export default function Home() {
       </div>
 
       <Container>
-        <h1 className="title">Our Products</h1>
+        <h1 className="title product-title">Our Products</h1>
         <Grid container className="products">
           <Grid item xs={12} md={6}>
-            <Paper
-              style={{
-                backgroundImage: "url(images/cleanser.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="cleanser title"
-            >
-              Cleansers
-            </Paper>
-            <Paper
-              style={{
-                backgroundImage: "url(images/toner.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="cleanser title"
-            >
-              Toners
-            </Paper>
-            <Paper
-              style={{
-                backgroundImage: "url(images/moisturizer.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="cleanser title"
-            >
-              Moisturizers
-            </Paper>
-            <Paper
-              style={{
-                backgroundImage: "url(images/essence.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="cleanser title"
-            >
-              Essences
-            </Paper>
+            <Link href="/cleansers">
+              <Paper
+                style={{
+                  backgroundImage: "url(images/cleanser.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cleanser title"
+              >
+                Cleansers
+              </Paper>
+            </Link>
+            <Link href="/toners">
+              <Paper
+                style={{
+                  backgroundImage: "url(images/toner.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cleanser title"
+              >
+                Toners
+              </Paper>
+            </Link>
+            <Link href="/moisturizers">
+              <Paper
+                style={{
+                  backgroundImage: "url(images/moisturizer.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cleanser title"
+              >
+                Moisturizers
+              </Paper>
+            </Link>
+            <Link href="/essences">
+              <Paper
+                style={{
+                  backgroundImage: "url(images/essence.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cleanser title"
+              >
+                Essences
+              </Paper>
+            </Link>
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Paper
-              style={{
-                backgroundImage: "url(images/exfoliator.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="cleanser title"
-            >
-              Exfoliators
-            </Paper>
-            <Paper
-              style={{
-                backgroundImage: "url(images/serum.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="cleanser title"
-            >
-              Serums
-            </Paper>
+            <Link href="/exfoliators">
+              <Paper
+                style={{
+                  backgroundImage: "url(images/exfoliator.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cleanser title"
+              >
+                Exfoliators
+              </Paper>
+            </Link>
+            <Link href="/serums">
+              <Paper
+                style={{
+                  backgroundImage: "url(images/serum.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cleanser title"
+              >
+                Serums
+              </Paper>
+            </Link>
             <Link href="/masks">
               <Paper
                 style={{
@@ -107,16 +119,18 @@ export default function Home() {
                 Masks
               </Paper>
             </Link>
-            <Paper
-              style={{
-                backgroundImage: "url(images/sunblock.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="cleanser title"
-            >
-              Sunblocks
-            </Paper>
+            <Link href="/sunblocks">
+              <Paper
+                style={{
+                  backgroundImage: "url(images/sunblock.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cleanser title"
+              >
+                Sunblocks
+              </Paper>
+            </Link>
           </Grid>
         </Grid>
         <div className="info-section">
@@ -227,6 +241,9 @@ export default function Home() {
           transition: 1s ease;
         }
 
+        .title.product-title {
+          text-align: center;
+        }
         .info-section {
           margin: 20px;
         }
