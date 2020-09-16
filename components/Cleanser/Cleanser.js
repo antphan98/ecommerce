@@ -25,7 +25,7 @@ const Cleanser = () => {
   return (
     <Container id="products">
       <Columns>
-        {cleansers.length &&
+        {cleansers &&
           cleansers.map((cleanser, i) => (
             <Link as={`/cleansers/${cleanser.name}`} href="/cleansers/[id]">
               <Columns.Column size={4} key={i} cleanser={cleanser}>

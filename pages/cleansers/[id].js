@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
-import { Columns, Container, Image, Button } from "react-bulma-components";
+import { Grid, Container, Button } from "@material-ui/core";
 import Header from "../../components/Header/Header";
 
 const fetcher = async (url) => {
@@ -25,11 +25,11 @@ export default function cleansers() {
     <>
       <Header />
       <Container>
-        <Columns>
-          <Columns.Column size="half">
-            <Image style={{ width: "80%" }} src={data.image}></Image>
-          </Columns.Column>
-          <Columns.Column>
+        <Grid container>
+          <Grid item sm={6}>
+            <img style={{ width: "80%" }} src={data.image}></img>
+          </Grid>
+          <Grid item sm={6}>
             <h1 className="title">{data.name}</h1>
             <h4 className="subtitle is-4">{data.vendor}</h4>
             <h4 className="subtitle is-4">${data.price}</h4>
@@ -39,8 +39,9 @@ export default function cleansers() {
             <p>Size: {data.size}</p>
 
             <Button>Add To Cart</Button>
-          </Columns.Column>
-        </Columns>
+            <Button>Wishlist</Button>
+          </Grid>
+        </Grid>
       </Container>
     </>
   );
