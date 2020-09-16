@@ -22,13 +22,12 @@ const Cleanser = () => {
     }
     fetchData();
   }, []);
-  // console.log(cleansers);
   return (
     <Container id="products">
       <Columns>
         {cleansers.length &&
           cleansers.map((cleanser, i) => (
-            <Link as={`/cleansers/${cleanser}`} href="/cleansers/[id]">
+            <Link as={`/cleansers/${cleanser.name}`} href="/cleansers/[id]">
               <Columns.Column size={4} key={i} cleanser={cleanser}>
                 <Image src={cleanser.image}></Image>
                 <h1>{cleanser.name}</h1>
