@@ -38,9 +38,11 @@ export default function Home() {
                   backgroundImage: "url(images/cleanser.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Cleansers
               </Paper>
             </Link>
@@ -50,9 +52,11 @@ export default function Home() {
                   backgroundImage: "url(images/toner.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Toners
               </Paper>
             </Link>
@@ -62,9 +66,11 @@ export default function Home() {
                   backgroundImage: "url(images/moisturizer.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Moisturizers
               </Paper>
             </Link>
@@ -74,9 +80,11 @@ export default function Home() {
                   backgroundImage: "url(images/essence.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Essences
               </Paper>
             </Link>
@@ -89,9 +97,11 @@ export default function Home() {
                   backgroundImage: "url(images/exfoliator.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Exfoliators
               </Paper>
             </Link>
@@ -101,9 +111,11 @@ export default function Home() {
                   backgroundImage: "url(images/serum.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Serums
               </Paper>
             </Link>
@@ -113,9 +125,11 @@ export default function Home() {
                   backgroundImage: "url(images/mask.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Masks
               </Paper>
             </Link>
@@ -125,9 +139,11 @@ export default function Home() {
                   backgroundImage: "url(images/sunblock.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  position: "relative",
                 }}
                 className="cleanser title"
               >
+                <div className="layer"></div>
                 Sunblocks
               </Paper>
             </Link>
@@ -236,9 +252,8 @@ export default function Home() {
         }
 
         .cleanser:hover {
-          background: white !important;
-          color: black !important;
           transition: 1s ease;
+          color: black !important;
         }
 
         .title.product-title {
@@ -246,6 +261,19 @@ export default function Home() {
         }
         .info-section {
           margin: 20px;
+        }
+
+        .layer {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .layer:hover {
+          background-color: rgba(255, 255, 255, 0.5);
+          transition: 0.7s ease;
         }
       `}</style>
     </div>

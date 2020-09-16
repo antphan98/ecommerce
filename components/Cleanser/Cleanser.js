@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Columns, Image, Container, Link } from "react-bulma-components";
+import { Columns, Image, Container } from "react-bulma-components";
+import Link from "next/link";
 
 const Cleanser = () => {
   const [cleansers, setCleansers] = useState([]);
@@ -21,13 +22,13 @@ const Cleanser = () => {
     }
     fetchData();
   }, []);
-
+  // console.log(cleansers);
   return (
     <Container id="products">
       <Columns>
-        {cleansers &&
+        {cleansers.length &&
           cleansers.map((cleanser, i) => (
-            <Link as={`/cleansers/${cleanser.name}`} href="/cleansers/[id]">
+            <Link as={`/cleansers/${cleanser}`} href="/cleansers/[id]">
               <Columns.Column size={4} key={i} cleanser={cleanser}>
                 <Image src={cleanser.image}></Image>
                 <h1>{cleanser.name}</h1>
