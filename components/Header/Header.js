@@ -1,8 +1,11 @@
 import React from "react";
-import { Box, Typography, Button, IconButton } from "@material-ui/core";
+import { Box, Button, IconButton } from "@material-ui/core";
 import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/client";
 
 export default function Header() {
+  const [session, loading] = useSession();
+
   return (
     <>
       <Box className="Box" display="flex" p={3} alignItems="center">
@@ -23,7 +26,17 @@ export default function Header() {
           <Button color="primary">Link</Button>
         </Box>
         <Box flexGrow={1} textAlign="right">
-          <IconButton>Sign In/Up</IconButton>
+          {!session && (
+            <>
+              <Button onClick={signIn}>Sign in</Button>
+            </>
+          )}
+          {session && (
+            <>
+              Signed in as {session.user.email} <br />
+              <Button onClick={signOut}>Sign out</Button>
+            </>
+          )}
         </Box>
       </Box>
 
