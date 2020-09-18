@@ -30,7 +30,7 @@ export default function cleansers() {
             <img style={{ width: "80%" }} src={data.image}></img>
           </Grid>
           <Grid item sm={6}>
-            <h1 className="title">{data.name}</h1>
+            <h1 className="title product-name">{data.name}</h1>
             <h4 className="subtitle is-4">{data.vendor}</h4>
             <h4 className="subtitle is-4">${data.price}</h4>
             <p>{data.details}</p>
@@ -43,6 +43,18 @@ export default function cleansers() {
           </Grid>
         </Grid>
       </Container>
+      <style jsx global>{`
+        @import url("https://fonts.googleapis.com/css2?family=Titan+One&family=Varela+Round&display=swap");
+
+        h1.title.product-name {
+          font-family: "Varela Round", sans-serif;
+          font-size: 2rem;
+        }
+
+        li {
+          cursor: pointer;
+        }
+      `}</style>
     </>
   );
 }

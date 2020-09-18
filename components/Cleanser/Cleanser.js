@@ -2,6 +2,7 @@ import fetch from "node-fetch";
 import { useState, useEffect } from "react";
 import { Columns, Image, Container } from "react-bulma-components";
 import Link from "next/link";
+import { Grid } from "@material-ui/core";
 
 const Cleanser = () => {
   const [cleansers, setCleansers] = useState([]);
@@ -24,18 +25,18 @@ const Cleanser = () => {
   }, []);
   return (
     <Container id="products">
-      <Columns>
+      <Grid container spacing={3}>
         {cleansers &&
           cleansers.map((cleanser, i) => (
             <Link as={`/cleansers/${cleanser.name}`} href="/cleansers/[id]">
-              <Columns.Column size={4} key={i} cleanser={cleanser}>
-                <Image src={cleanser.image}></Image>
+              <Grid item xs={4} key={i} cleanser={cleanser}>
+                <img className="cleanser-img" src={cleanser.image}></img>
                 <h1>{cleanser.name}</h1>
                 <p>{cleanser.price}</p>
-              </Columns.Column>
+              </Grid>
             </Link>
           ))}
-      </Columns>
+      </Grid>
 
       <style jsx global>{``}</style>
     </Container>

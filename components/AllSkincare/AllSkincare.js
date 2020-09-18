@@ -28,7 +28,7 @@ const AllSkincare = () => {
               <Grid item xs={4} key={i} skincare={skincare}>
                 <img src={skincare.image}></img>
                 <h1>{skincare.name}</h1>
-                <p>{skincare.price}</p>
+                <p>{skincare.price.toFixed(2)}</p>
               </Grid>
             </Link>
           ))}
