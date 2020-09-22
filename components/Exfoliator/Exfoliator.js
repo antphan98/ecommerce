@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Columns, Image, Container } from "react-bulma-components";
+import Link from "next/link";
+import { Grid, Container } from "@material-ui/core";
 
 const Exfoliator = () => {
   const [exfoliators, setExfoliators] = useState();
@@ -22,17 +23,23 @@ const Exfoliator = () => {
   }, []);
 
   return (
-    <Container>
-      <Columns>
+    <Container id="products">
+      <Grid container spacing={3}>
         {exfoliators &&
           exfoliators.map((exfoliator, i) => (
-            <Columns.Column size={4} key={i} skincare={exfoliator}>
-              <Image src={exfoliator.image}></Image>
-              <h1>{exfoliator.name}</h1>
-              <p>${exfoliator.price}</p>
-            </Columns.Column>
+            <Link
+              as={`/exfoliators/${exfoliator.name}`}
+              href="/exfoliators/[id]"
+            >
+              <Grid item xs={4} key={i} cleanser={exfoliator}>
+                <img className="cleanser-img" src={exfoliator.image}></img>
+                <h1>{exfoliator.name}</h1>
+                <p>{exfoliator.price}</p>
+              </Grid>
+            </Link>
           ))}
-      </Columns>
+      </Grid>
+
       <style jsx global>{``}</style>
     </Container>
   );
