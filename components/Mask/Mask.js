@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Columns, Image, Container } from "react-bulma-components";
+import { Grid, Container } from "@material-ui/core";
 
 const Mask = () => {
   const [masks, setMasks] = useState();
@@ -22,17 +22,19 @@ const Mask = () => {
   });
 
   return (
-    <Container>
-      <Columns>
+    <Container id="products">
+      <Grid container spacing={3}>
         {masks &&
           masks.map((mask, i) => (
-            <Columns.Column key={i} size={4} skincare={mask}>
-              <Image src={mask.image}></Image>
-              <h1>{mask.name}</h1>
-              <p>{mask.price}</p>
-            </Columns.Column>
+            <Link as={`/masks/${mask.name}`} href="/masks/[id]">
+              <Grid item xs={4} key={i} cleanser={mask}>
+                <img className="cleanser-img" src={mask.image}></img>
+                <h1>{mask.name}</h1>
+                <p>{mask.price}</p>
+              </Grid>
+            </Link>
           ))}
-      </Columns>
+      </Grid>
     </Container>
   );
 };

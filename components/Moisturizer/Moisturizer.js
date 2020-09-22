@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Columns, Image, Container } from "react-bulma-components";
+import { Grid, Container } from "react-bulma-components";
 
 const Moisturizer = () => {
   const [moisturizers, setMoisturizers] = useState();
@@ -25,16 +25,21 @@ const Moisturizer = () => {
 
   return (
     <Container id="products">
-      <Columns>
+      <Grid container spacing={3}>
         {moisturizers &&
           moisturizers.map((moisturizer, i) => (
-            <Columns.Column key={i} size={4} skincare={moisturizer}>
-              <Image src={moisturizer.image}></Image>
-              <h1>{moisturizer.name}</h1>
-              <p>{moisturizer.price}</p>
-            </Columns.Column>
+            <Link
+              as={`/moisturizers/${moisturizer.name}`}
+              href="/moisturizers/[id]"
+            >
+              <Grid item xs={4} key={i} cleanser={moisturizer}>
+                <img className="cleanser-img" src={moisturizer.image}></img>
+                <h1>{moisturizer.name}</h1>
+                <p>{moisturizer.price}</p>
+              </Grid>
+            </Link>
           ))}
-      </Columns>
+      </Grid>
       <style jsx global>{``}</style>
     </Container>
   );
