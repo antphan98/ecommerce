@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Columns, Image, Container } from "react-bulma-components";
+import Link from "next/link";
+
+import { Grid, Container } from "@material-ui/core";
 
 const Sunblock = () => {
   const [sunblocks, setSunblocks] = useState();
@@ -23,17 +25,19 @@ const Sunblock = () => {
   }, []);
 
   return (
-    <Container>
-      <Columns>
+    <Container id="products">
+      <Grid container spacing={3}>
         {sunblocks &&
           sunblocks.map((sunblock, i) => (
-            <Columns.Column key={i} size={4} skincare={sunblock}>
-              <Image src={serum.image}></Image>
-              <h1>{serum.name}</h1>
-              <p>{serum.price}</p>
-            </Columns.Column>
+            <Link as={`/sunblocks/${sunblock.name}`} href="/sunblocks/[id]">
+              <Grid item xs={4} key={i} cleanser={sunblock}>
+                <img className="cleanser-img" src={sunblock.image}></img>
+                <h1>{sunblock.name}</h1>
+                <p>{sunblock.price}</p>
+              </Grid>
+            </Link>
           ))}
-      </Columns>
+      </Grid>
     </Container>
   );
 };

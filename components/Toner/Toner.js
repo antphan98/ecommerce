@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Columns, Image, Container } from "react-bulma-components";
+import { Grid, Container } from "@material-ui/core";
+import Link from "next/link";
 
 const Toner = () => {
   const [toners, setToners] = useState();
@@ -23,16 +24,18 @@ const Toner = () => {
 
   return (
     <Container id="products">
-      <Columns>
+      <Grid container spacing={3}>
         {toners &&
           toners.map((toner, i) => (
-            <Columns.Column size={4} key={i} skincare={toner}>
-              <Image src={toner.image}></Image>
-              <h1>{toner.name}</h1>
-              <p>{toner.price}</p>
-            </Columns.Column>
+            <Link as={`/toners/${toner.name}`} href="/toners/[id]">
+              <Grid item xs={4} key={i} cleanser={toner}>
+                <img className="cleanser-img" src={toner.image}></img>
+                <h1>{toner.name}</h1>
+                <p>{toner.price}</p>
+              </Grid>
+            </Link>
           ))}
-      </Columns>
+      </Grid>
 
       <style jsx global>{``}</style>
     </Container>

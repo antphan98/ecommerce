@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Grid, Container } from "react-bulma-components";
+import { Grid, Container } from "@material-ui/core";
+import Link from "next/link";
 
 const Moisturizer = () => {
   const [moisturizers, setMoisturizers] = useState();
