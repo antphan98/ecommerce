@@ -1,8 +1,7 @@
 import fetch from "node-fetch";
 import { useState, useEffect } from "react";
-import { Columns, Image, Container } from "react-bulma-components";
 import Link from "next/link";
-import { Grid } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 
 const Cleanser = () => {
   const [cleansers, setCleansers] = useState([]);

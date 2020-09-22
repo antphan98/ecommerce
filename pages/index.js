@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../components/Header/Header";
+import HomeHeader from "../components/HomeHeader/HomeHeader";
 import Footer from "../components/Footer/Footer";
 import { Button, Grid, Container, Paper } from "@material-ui/core";
 import AOS from "aos";
@@ -19,7 +19,7 @@ export default function Home() {
         <title>All About Skin</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <HomeHeader />
       <HomePage />
 
       <Footer />
