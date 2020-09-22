@@ -23,19 +23,19 @@ const Essence = () => {
   }, []);
 
   return (
-    <Container>
-      <Columns>
+    <Container id="products">
+      <Grid container spacing={3}>
         {essences &&
           essences.map((essence, i) => (
-            <Link as={`/essences/${essence.name}`} href="essences/[id]">
-              <Columns.Column size={4} key={i} skincare={essence}>
-                <Image src={essence.image}></Image>
+            <Link as={`/essences/${essence.name}`} href="/essences/[id]">
+              <Grid item xs={4} key={i} essence={essence}>
+                <img className="essence-img" src={essence.image}></img>
                 <h1>{essence.name}</h1>
                 <p>{essence.price}</p>
-              </Columns.Column>
+              </Grid>
             </Link>
           ))}
-      </Columns>
+      </Grid>
     </Container>
   );
 };

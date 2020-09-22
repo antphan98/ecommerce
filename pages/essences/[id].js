@@ -9,7 +9,7 @@ const fetcher = async (url) => {
   return data;
 };
 
-export default function cleansers() {
+export default function essences() {
   const { query } = useRouter();
   const { data, error } = useSWR(
     () => query.id && `/api/skincare/${query.id}`,
