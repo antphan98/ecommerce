@@ -28,7 +28,9 @@ export default function Header() {
         <Box flexGrow={1} textAlign="right">
           {!session && (
             <>
-              <Button onClick={signIn}>Sign in</Button>
+              <Button href={`/api/auth/signin`} onClick={signIn}>
+                Sign in
+              </Button>
             </>
           )}
           {session && (
