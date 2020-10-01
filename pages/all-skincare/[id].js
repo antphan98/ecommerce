@@ -38,7 +38,26 @@ export default function allskincare() {
             <p>pH Level: {data.phlevel}</p>
             <p>Size: {data.size}</p>
 
-            <Button>Add To Cart</Button>
+            <Button
+              onClick={async () => {
+                fetch("/api/cart", {
+                  method: "POST",
+                  body: JSON.stringify(requestBody),
+                })
+                  .then((res) => res.json())
+                  .then(
+                    (response) => {
+                      console.log(response);
+                    },
+                    (error) => {
+                      console.log(error);
+                    }
+                  );
+                handleSelect(requestBody);
+              }}
+            >
+              Add To Cart
+            </Button>
           </Columns.Column>
         </Columns>
       </Container>
