@@ -215,6 +215,10 @@ export default function HomePage() {
         @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
 
+        .MuiPaper-root {
+          cursor: pointer;
+
+        }
         body {
           font-family: "Varela Round", sans-serif;
         }
@@ -242,6 +246,7 @@ export default function HomePage() {
 
         .Grid.MuiGrid-item {
           padding: 50px;
+          
         }
 
         .cleanser {

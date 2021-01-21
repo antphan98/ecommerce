@@ -47,7 +47,7 @@ export default function HomeHeader() {
         }
 
         h1.title {
-          font-family: "Titan One", cursive;
+          font-family: 'Fraunces', serif;
           font-size: 3rem;
         }
 
@@ -57,7 +57,7 @@ export default function HomeHeader() {
 
         .MuiButton-label {
           font-size: 1.5rem;
-          font-family: "Titan One", cursive;
+          font-family: 'Fraunces', serif;
         }
 
         .dropdown {
@@ -82,6 +82,7 @@ export default function HomeHeader() {
 
         .Box.MuiBox-root {
           position: absolute;
+          width: 100%;
         }
       `}</style>
     </>

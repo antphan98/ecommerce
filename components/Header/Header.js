@@ -35,7 +35,7 @@ export default function Header() {
           )}
           {session && (
             <>
-              Signed in as {session.user.email} <br />
+              Welcome back {session.user.email}! <br />
               <Button onClick={signOut}>Sign out</Button>
             </>
           )}
@@ -43,16 +43,16 @@ export default function Header() {
       </Box>
 
       <style jsx global>{`
-        @import url("https://fonts.googleapis.com/css2?family=Titan+One&family=Varela+Round&display=swap");
+       @import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
         * {
-          font-family: "Varela Round", sans-serif;
+          font-family: 'Fraunces', serif;
         }
         Box.MuiBox-root-10 {
           background-image: url("https://i.pinimg.com/474x/c6/f6/a7/c6f6a7aba29e0eec8150d914b5e6271a.jpg");
         }
 
         h1.title {
-          font-family: "Titan One", cursive;
+          font-family: 'Fraunces', serif;
           font-size: 3rem;
         }
 
@@ -62,7 +62,7 @@ export default function Header() {
 
         .MuiButton-label {
           font-size: 1.5rem;
-          font-family: "Titan One", cursive;
+          font-family: 'Fraunces', serif;
         }
 
         .dropdown {
